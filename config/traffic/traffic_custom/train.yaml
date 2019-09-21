@@ -1,0 +1,40 @@
+work_dir: ./runs/recognition/kinetics_skeleton/ST_GCN/
+
+weights: ./models/st_gcn.kinetics.pt
+ignore_weights: [fcn]
+
+
+# feeder
+feeder: feeder.feeder.Feeder
+train_feeder_args:
+  random_choose: True
+  random_move: True
+  window_size: 150
+  data_path: config/traffic/traffic_custom/train_data.npy
+  label_path: config/traffic/traffic_custom/train_label.pkl
+test_feeder_args:
+  data_path: config/traffic/traffic_custom/val_data.npy
+  label_path: config/traffic/traffic_custom/val_label.pkl
+
+# model
+model: net.st_gcn.Model
+model_args:
+  in_channels: 3 #3
+  num_class: 3
+  edge_importance_weighting: True
+  graph_args:
+    layout: 'openpose'
+    strategy: 'spatial'
+
+# training
+device: [0]
+batch_size: 16
+test_batch_size: 8
+
+#optim
+base_lr: 0.1
+step: [20, 30, 40, 50]
+num_epoch: 50
+
+
+
