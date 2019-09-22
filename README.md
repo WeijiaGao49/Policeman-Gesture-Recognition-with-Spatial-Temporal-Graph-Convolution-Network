@@ -15,3 +15,5 @@ By using skeleton data for pose recognition and video understanding,
 
 ## Result
 To visualize how ST-GCN exploit local correlation and local pattern, the feature vector magnitude of each node in the final spatial temporal graph is computed, and being overlayed on the original video.
+
+<img src="https://github.com/WeijiaGao49/Policeman-Gesture-Recognition-with-Spatial-Temporal-Graph-Convolution-Network/raw/master/demo/left.gif" width=30% height=30%> <img src="https://github.com/WeijiaGao49/Policeman-Gesture-Recognition-with-Spatial-Temporal-Graph-Convolution-Network/raw/master/demo/parallel.gif" width=30% height=30%> <img src="https://github.com/WeijiaGao49/Policeman-Gesture-Recognition-with-Spatial-Temporal-Graph-Convolution-Network/raw/master/demo/result.gif" width=30% height=30%>
